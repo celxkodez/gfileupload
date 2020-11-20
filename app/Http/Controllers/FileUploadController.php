@@ -21,7 +21,7 @@ class FileUploadController extends Controller
             $finalPath = '/storage/' . $filePath;
             // $fileModel->save();
         }
-        $file = FileUpload::create(['id'=> 45, 'file_url' => $finalPath]);
+        $file = FileUpload::create(['file_url' => $finalPath]);
 
         return response()->json(['message' => 'successful', 'data' => $file]);
     }
